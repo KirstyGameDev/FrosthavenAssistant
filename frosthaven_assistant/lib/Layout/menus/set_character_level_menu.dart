@@ -95,7 +95,7 @@ class SetCharacterLevelMenuState extends State<SetCharacterLevelMenu> {
 
     return Container(
         width: 240 * scale,
-        height: 240 * scale,
+        height: 280 * scale,
         decoration: BoxDecoration(
           image: DecorationImage(
             colorFilter: ColorFilter.mode(
@@ -173,7 +173,19 @@ class SetCharacterLevelMenuState extends State<SetCharacterLevelMenu> {
                             nameController.text, widget.character.id));
                       }
                     },
-                  ))
+                  )),
+             Positioned(
+              width : 160 * scale,
+              height : 40 * scale,
+              right : 0,
+              bottom: 0,
+              child : TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child : const 
+                  Text('Close', style: TextStyle (fontSize: 30)),
+              ) )
             ],
           ),
         ]));
